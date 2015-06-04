@@ -60,7 +60,7 @@ class Player(Character):
     
     # Get the PC's name from the user.
     # char_name is used instead of name.
-    char_name = input("What is your characters name?\n>>>")
+    char_name = raw_input("What is your characters name?\n>>>")
     print"Welcome %s to the Interactive Python Text RPG!"% (char_name)
     print"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     def fight():
@@ -323,7 +323,7 @@ class Mage(Player):
         
         while True:
             print"~~~~~~~~~Press a key to Continue.~~~~~~~"
-            command=input("Choose a command.\n>>>")
+            command=raw_input("Choose a command.\n>>>")
             if command and command not in spells:
                 print'Not a valid command'
                 continue
@@ -421,7 +421,7 @@ def profession():
         print"- Press %s for %s" % (letter, choice[letter].__name__)
     print"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     # Get the class from the user.
-    pclass = input("What is your class?\n>>>")
+    pclass = raw_input("What is your class?\n>>>")
     if pclass in choice.keys():
         print"You choose the %s class."% (choice[pclass].__name__)
         print"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
@@ -527,7 +527,7 @@ def commands():
     print'press Enter to skip'
     while True:
         print"~~~~~~~~~Press a key to Continue.~~~~~~~"
-        command=input("Choose a command.\n>>>")
+        command=raw_input("Choose a command.\n>>>")
         if command and command not in sprite.hero.COMMANDS:
             print'Not a valid command'
             continue
